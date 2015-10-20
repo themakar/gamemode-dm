@@ -1,4 +1,4 @@
-#undef MAX_PLAYERS
+п»ї#undef MAX_PLAYERS
 #define MAX_PLAYERS (100)
 
 #undef MAX_PLAYER_TEXT_DRAWS
@@ -56,9 +56,9 @@ main()
 	if (mysql_errno(sql_handle) == 0)
 	{
 		print("\n\n\n");
-		print("| Игровой режим "GAMEMODE_NAME".");
-		print("| Успешно загружен. Автор: "MODE_AUTHOR".");
-		print("| Последнее обновление: "MODE_DATA".");
+		print("| РРіСЂРѕРІРѕР№ СЂРµР¶РёРј "GAMEMODE_NAME".");
+		print("| РЈСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР¶РµРЅ. РђРІС‚РѕСЂ: "MODE_AUTHOR".");
+		print("| РџРѕСЃР»РµРґРЅРµРµ РѕР±РЅРѕРІР»РµРЅРёРµ: "MODE_DATA".");
 		print("\n\n\n");
 	}
 }

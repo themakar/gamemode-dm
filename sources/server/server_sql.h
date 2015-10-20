@@ -1,10 +1,10 @@
-stock SQL_CreateConnection()
+п»їstock SQL_CreateConnection()
 {
 	sql_handle = mysql_connect(SQL_HOSTNAME, SQL_USERNAME, SQL_DATABASE, SQL_PASSWORD);
 
 	if (mysql_errno(sql_handle) != 0) {
 		print(" ");
-	    printf("[ОШИБКА] Не удалось подключиться к серверу SQL, проверьте настройки соединения!\n\a");
+	    printf("[РћРЁРР‘РљРђ] РќРµ СѓРґР°Р»РѕСЃСЊ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЃРµСЂРІРµСЂСѓ SQL, РїСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё СЃРѕРµРґРёРЅРµРЅРёСЏ!\n\a");
 	}
 	return true;
 }
@@ -28,11 +28,11 @@ public OnQueryFinished(playerid, threadid)
 				PlayerInfo[playerid][pLoginAttempts] ++;
 				
 				if (PlayerInfo[playerid][pLoginAttempts] >= MAX_LOGIN_ATTEMPTS) {
-					SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Вы были кикнуты, вы исчерпали все попытки входа.");
+					SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Р’С‹ Р±С‹Р»Рё РєРёРєРЅСѓС‚С‹, РІС‹ РёСЃС‡РµСЂРїР°Р»Рё РІСЃРµ РїРѕРїС‹С‚РєРё РІС…РѕРґР°.");
     	            KickEx(playerid);
 				}
 				else {
-					SendClientMessagef(playerid, COLOR_LIGHTRED, "[!] Неверно введен пароль (%d/%d попыток).", PlayerInfo[playerid][pLoginAttempts], MAX_LOGIN_ATTEMPTS);
+					SendClientMessagef(playerid, COLOR_LIGHTRED, "[!] РќРµРІРµСЂРЅРѕ РІРІРµРґРµРЅ РїР°СЂРѕР»СЊ (%d/%d РїРѕРїС‹С‚РѕРє).", PlayerInfo[playerid][pLoginAttempts], MAX_LOGIN_ATTEMPTS);
 				}
 			}
 			else
@@ -50,10 +50,10 @@ stock OnPlayerLoginAttemp(playerid, const login[], const password[])
 	new query[256];
 	
 	if (strlen(login) < 1)
-		return SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Вы должны указать свой логин.");
+		return SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Р’С‹ РґРѕР»Р¶РЅС‹ СѓРєР°Р·Р°С‚СЊ СЃРІРѕР№ Р»РѕРіРёРЅ.");
 	
 	if (strlen(password) < 1)
-		return SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Вы должны указать свой пароль.");
+		return SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Р’С‹ РґРѕР»Р¶РЅС‹ СѓРєР°Р·Р°С‚СЊ СЃРІРѕР№ РїР°СЂРѕР»СЊ.");
 	
 	format(query, sizeof(query), "SELECT `id` FROM `accounts` WHERE `username` = '%s' AND `password` = '%s' OR `email` = '%s' AND `password` = '%s'", login, password, login, password);
     mysql_tquery(sql_handle, query, "OnQueryFinished", "dd", playerid, THREAD_LOGIN);
@@ -65,15 +65,15 @@ stock PlayerCreateAccount(playerid, const name[], const password[], const mail[]
 	new query[256];
 	
 	if (strlen(name) < 1)
-		return SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Вы должны указать свой логин.");
+		return SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Р’С‹ РґРѕР»Р¶РЅС‹ СѓРєР°Р·Р°С‚СЊ СЃРІРѕР№ Р»РѕРіРёРЅ.");
 	
 	if (strlen(password) < 1)
-		return SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Вы должны указать свой пароль.");
+		return SendClientMessage(playerid, COLOR_LIGHTRED, "[!] Р’С‹ РґРѕР»Р¶РЅС‹ СѓРєР°Р·Р°С‚СЊ СЃРІРѕР№ РїР°СЂРѕР»СЊ.");
 	
 	format(query, sizeof(query), "INSERT INTO `accounts` (`username`, `email`, `password`) VALUES('%s', '%s', '%s')", name, mail, password);
 	mysql_tquery(sql_handle, query);
 	
-	SendClientMessage(playerid, COLOR_DARKBLUE, "Вы успешно зарегистрировали свой аккаунт.");
+	SendClientMessage(playerid, COLOR_DARKBLUE, "Р’С‹ СѓСЃРїРµС€РЅРѕ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°Р»Рё СЃРІРѕР№ Р°РєРєР°СѓРЅС‚.");
 	
 	SetSpawnInfo(playerid, 0, random(311), 1726.0510, -1851.8408, 13.7159, 0.0, 0, 0, 0, 0, 0, 0);
 	TogglePlayerSpectating(playerid, false);

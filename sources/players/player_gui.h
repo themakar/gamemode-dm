@@ -1,4 +1,4 @@
-public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
+п»їpublic OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 {
 	if (PlayerInterface[playerid][pShowConnectMenu])
 	{
@@ -15,11 +15,11 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	{
 		if (playertextid == PlayerInterface[playerid][pTextDraws][12]) {
 			Player_DestroyLoginBox(playerid);
-			Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Ввод логина", "{ffffff}Пожалуйста, введите ваш логин или почтовый адрес:", "Далее", "Отмена");	
+			Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Р’РІРѕРґ Р»РѕРіРёРЅР°", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ Р»РѕРіРёРЅ РёР»Рё РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		}
 		else if (playertextid == PlayerInterface[playerid][pTextDraws][13]) {
 			Player_DestroyLoginBox(playerid);
-			Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Ввод пароля", "{ffffff}Пожалуйста, введите ваш пароль в поле ниже:", "Далее", "Отмена");	
+			Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Р’РІРѕРґ РїР°СЂРѕР»СЏ", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ РїР°СЂРѕР»СЊ РІ РїРѕР»Рµ РЅРёР¶Рµ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		}
 		else if (playertextid == PlayerInterface[playerid][pTextDraws][16]) {
 			Player_DestroyLoginBox(playerid);
@@ -36,11 +36,11 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 			Player_DestroyRegisterBox(playerid);
 			
 			PlayerInfo[playerid][pRegistration] = true;
-			Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Ввод логина", "{ffffff}Пожалуйста, введите ваш логин или почтовый адрес:", "Далее", "Отмена");	
+			Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Р’РІРѕРґ Р»РѕРіРёРЅР°", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ Р»РѕРіРёРЅ РёР»Рё РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		}
 		else if (playertextid == PlayerInterface[playerid][pTextDraws][24]) {
 			Player_DestroyRegisterBox(playerid);
-			Dialog_Show(playerid, MailInput, DIALOG_STYLE_INPUT, "{ffffff}Ввод электронной почты", "{ffffff}Пожалуйста, введите свой электронный ящик:", "Далее", "Отмена");	
+			Dialog_Show(playerid, MailInput, DIALOG_STYLE_INPUT, "{ffffff}Р’РІРѕРґ СЌР»РµРєС‚СЂРѕРЅРЅРѕР№ РїРѕС‡С‚С‹", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ СЃРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ СЏС‰РёРє:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		}
 		else if (playertextid == PlayerInterface[playerid][pTextDraws][27]) {
 			Player_DestroyRegisterBox(playerid);
@@ -54,7 +54,7 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 			Player_DestroyRegisterBox(playerid);
 			
 			PlayerInfo[playerid][pRegistration] = true;
-			Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Ввод пароля", "{ffffff}Пожалуйста, введите ваш пароль в поле ниже:", "Далее", "Отмена");	
+			Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Р’РІРѕРґ РїР°СЂРѕР»СЏ", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ РїР°СЂРѕР»СЊ РІ РїРѕР»Рµ РЅРёР¶Рµ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		}
 	}
     return true;

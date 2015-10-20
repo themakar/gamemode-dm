@@ -1,15 +1,15 @@
-Dialog:LoginInput(playerid, response, listitem, inputtext[])
+п»їDialog:LoginInput(playerid, response, listitem, inputtext[])
 {
 	if (response)
 	{
 		if (isnull(inputtext))
-			return Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Ввод логина", "{ffffff}Пожалуйста, введите ваш логин или почтовый адрес:", "Далее", "Отмена");	
+			return Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Р’РІРѕРґ Р»РѕРіРёРЅР°", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ Р»РѕРіРёРЅ РёР»Рё РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 	
 		if (strlen(inputtext) > MAX_PLAYER_NAME)
-			return Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Ввод логина", "{ffffff}Пожалуйста, введите ваш логин или почтовый адрес:", "Далее", "Отмена");	
+			return Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Р’РІРѕРґ Р»РѕРіРёРЅР°", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ Р»РѕРіРёРЅ РёР»Рё РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		
 		if (!IsValidNickName(inputtext))
-			return Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Ввод логина", "{ffffff}Пожалуйста, введите ваш логин или почтовый адрес:", "Далее", "Отмена");	
+			return Dialog_Show(playerid, LoginInput, DIALOG_STYLE_INPUT, "{ffffff}Р’РІРѕРґ Р»РѕРіРёРЅР°", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ Р»РѕРіРёРЅ РёР»Рё РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		
 		format(PlayerNickName[playerid], MAX_PLAYER_NAME, inputtext);
 	}
@@ -30,13 +30,13 @@ Dialog:PassInput(playerid, response, listitem, inputtext[])
 	if (response)
 	{
 		if (isnull(inputtext))
-			return Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Ввод пароля", "{ffffff}Пожалуйста, введите ваш пароль в поле ниже:", "Далее", "Отмена");	
+			return Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Р’РІРѕРґ РїР°СЂРѕР»СЏ", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ РїР°СЂРѕР»СЊ РІ РїРѕР»Рµ РЅРёР¶Рµ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		
 		if (strlen(inputtext) > 32)
-			return Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Ввод пароля", "{ffffff}Пожалуйста, введите ваш пароль в поле ниже:", "Далее", "Отмена");	
+			return Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Р’РІРѕРґ РїР°СЂРѕР»СЏ", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ РїР°СЂРѕР»СЊ РІ РїРѕР»Рµ РЅРёР¶Рµ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		
 		if (!IsValidNickName(inputtext))
-			return Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Ввод пароля", "{ffffff}Пожалуйста, введите ваш пароль в поле ниже:", "Далее", "Отмена");	
+			return Dialog_Show(playerid, PassInput, DIALOG_STYLE_PASSWORD, "{ffffff}Р’РІРѕРґ РїР°СЂРѕР»СЏ", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ РїР°СЂРѕР»СЊ РІ РїРѕР»Рµ РЅРёР¶Рµ:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		
 		format(PlayerPassword[playerid], 32, inputtext);
 	}
@@ -57,13 +57,13 @@ Dialog:MailInput(playerid, response, listitem, inputtext[])
 	if (response)
 	{
 		if (isnull(inputtext))
-			return Dialog_Show(playerid, MailInput, DIALOG_STYLE_INPUT, "{ffffff}Ввод электронной почты", "{ffffff}Пожалуйста, введите свой электронный ящик:", "Далее", "Отмена");	
+			return Dialog_Show(playerid, MailInput, DIALOG_STYLE_INPUT, "{ffffff}Р’РІРѕРґ СЌР»РµРєС‚СЂРѕРЅРЅРѕР№ РїРѕС‡С‚С‹", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ СЃРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ СЏС‰РёРє:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		
 		if (strlen(inputtext) > 64)
-			return Dialog_Show(playerid, MailInput, DIALOG_STYLE_INPUT, "{ffffff}Ввод электронной почты", "{ffffff}Пожалуйста, введите свой электронный ящик:", "Далее", "Отмена");	
+			return Dialog_Show(playerid, MailInput, DIALOG_STYLE_INPUT, "{ffffff}Р’РІРѕРґ СЌР»РµРєС‚СЂРѕРЅРЅРѕР№ РїРѕС‡С‚С‹", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ СЃРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ СЏС‰РёРє:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		
 		if (!IsValidEmail(inputtext))
-			return Dialog_Show(playerid, MailInput, DIALOG_STYLE_INPUT, "{ffffff}Ввод электронной почты", "{ffffff}Пожалуйста, введите свой электронный ящик:", "Далее", "Отмена");	
+			return Dialog_Show(playerid, MailInput, DIALOG_STYLE_INPUT, "{ffffff}Р’РІРѕРґ СЌР»РµРєС‚СЂРѕРЅРЅРѕР№ РїРѕС‡С‚С‹", "{ffffff}РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ СЃРІРѕР№ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ СЏС‰РёРє:", "Р”Р°Р»РµРµ", "РћС‚РјРµРЅР°");	
 		
 		format(PlayerMail[playerid], 64, inputtext);
 	}
